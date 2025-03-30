@@ -19,7 +19,7 @@ However, the main functions of the package _should_ work with versions 3.9, 3.10
 ### With conda
 
 1. Verify your Python version:
-
+t
 ```bash
 python3 --version
 ```
@@ -70,7 +70,7 @@ docker build -t fcm-notebook:latest .
 Use the following command to start the JupyterLab server in a Docker container:
 
 ```bash
-docker run -it --rm -p 8888:8888 -v "${PWD}":/workspace fcm-notebook:latest
+docker run -it --rm -p 8888:8888 -v `%cd%`:/workspace fcm-notebook:latest
 ```
 
 If you are on Windows (without WSL), replace `"${PWD}"` with `%cd%`.
